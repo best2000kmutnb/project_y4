@@ -10,6 +10,10 @@ const routes = [
     path: '/home',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/anotherpage/:id',
+    component: () => import('../views/AnotherPage.vue')
   }
 ]
 

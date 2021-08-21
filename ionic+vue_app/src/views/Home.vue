@@ -1,25 +1,25 @@
 <template>
-  <ion-page>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>ion title</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      content
-    </ion-content>
-  </ion-page>
+  <base-layout page_title='Home'>
+
+      <ion-list>
+        <ion-item router-link='/anotherpage/1'>AnotherPage1</ion-item>
+        <ion-item router-link='/anotherpage/2'>AnotherPage2</ion-item>
+        <ion-item router-link='/anotherpage/3'>AnotherPage3</ion-item>
+      </ion-list>
+
+  </base-layout>
 </template>
 
 <script>
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent} from '@ionic/vue'
+import { 
+  IonList,
+  IonItem
+} from '@ionic/vue'
+
 export default {
   components: {
-    IonPage,
-    IonHeader,
-    IonTitle,
-    IonContent,
-    IonToolbar
+    IonList,
+    IonItem
   }
 }
 </script>
