@@ -1,7 +1,7 @@
 <template>
     <ion-img :src="img" :alt="name"></ion-img>
-    <h2>{{ name }}</h2>
-    <p>{{ desc }}</p>
+    <h2 class="ion-text-center">{{ name }}</h2>
+    <p class="ion-text-center">{{ desc }}</p>
 </template>
 
 <script>

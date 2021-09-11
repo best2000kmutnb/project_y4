@@ -12,8 +12,12 @@ const routes = [
     component: ItemListPage
   },
   {
-    path: '/itemdetail/:id',
+    path: '/item/:id',
     component: () => import('../pages/ItemDetailPage.vue')
+  },
+  {
+    path: '/item/add',
+    component: () => import('../pages/AddItemPage.vue')
   }
 ]
 

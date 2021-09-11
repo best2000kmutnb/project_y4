@@ -7,6 +7,9 @@
           <ion-back-button :default-href='page_default_backlink'></ion-back-button>
         </ion-buttons>
         <ion-title>{{page_title}}</ion-title>
+        <ion-buttons slot="end">
+          <slot name="actions-end"></slot>
+        </ion-buttons>
       </ion-toolbar>
       
     </ion-header>

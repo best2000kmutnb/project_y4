@@ -1,5 +1,5 @@
 <template>
-    <ion-item :router-link="`/itemdetail/${obj_lis_item.id}`">
+    <ion-item :router-link="`/item/${obj_lis_item.id}`">
         <ion-thumbnail slot="start"><ion-img :src="obj_lis_item.img" :alt="obj_lis_item.name+' pic'"></ion-img></ion-thumbnail>
         <ion-label>{{obj_lis_item.name}}</ion-label>
       </ion-item>
