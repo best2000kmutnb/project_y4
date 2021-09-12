@@ -19,6 +19,22 @@ const store = createStore({
               ],
         };
     },
+    mutations: {
+        addItem(state, itemData) {
+            const newItem = {
+                id: new Date().toISOString(),
+                name: itemData.name,
+                img: itemData.img,
+                desc: itemData.desc
+            };
+            state.obj_lis.unshift(newItem);
+        }
+    },
+    actions: {
+        addItem(context, itemData) {
+            context.commit('addItem', itemData);
+        }
+    },
     getters: {
         obj_lis_info(state) {
             return state.obj_lis;
