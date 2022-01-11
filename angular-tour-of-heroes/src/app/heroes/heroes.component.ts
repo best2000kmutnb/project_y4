@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero, heroes } from '../hero';
-//import { HeroService } from '../hero.service';
+import { Hero } from '../hero';
+import { HeroService } from '../hero.service';
+//import * as Omise from 'omise';
+//import * as md5 from 'js-md5';
 
 @Component({
   selector: 'app-heroes',
@@ -8,19 +10,19 @@ import { Hero, heroes } from '../hero';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-  selectedHero?: Hero;
-  //heroes: Hero[] = [];
-  heroes: Hero[] = heroes;
 
-  //constructor(private heroService: HeroService) { }
+  selectedHero?: Hero;
+  heroes: Hero[] = [];
+
+  constructor(private heroService: HeroService) { }
 
   ngOnInit(): void {
-    //console.log(this.heroService.getHeroes())
+    //console.log(Omise);
+    //console.log(md5("lol"));
+    this.heroes = this.heroService.getHeroes();
   }
   
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
   }
-  
-
 }
